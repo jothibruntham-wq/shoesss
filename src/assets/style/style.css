@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #ffffff;
+  color: #151515;
+}
+
+button {
+  font-family: inherit;
+}
+
+.shoe-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+
+/* ================= TOP ================= */
+
+.top-line {
+  height: 12px;
+  width: 100%;
+  background: #e7c8ff;
+}
+
+
+/* ================= MAIN ================= */
+
+.shoe-container {
+  min-height: 570px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+
+/* ================= LEFT ================= */
+
+.product-info {
+  padding: 80px 8% 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.small-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #777;
+}
+
+.product-info h1 {
+  font-size: clamp(30px, 4vw, 58px);
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  max-width: 400px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.divider {
+  width: 100%;
+  max-width: 420px;
+  height: 1px;
+  background: #dedede;
+  margin-bottom: 20px;
+}
+
+
+/* ================= COLOR ================= */
+
+.option-title {
+  display: flex;
+  gap: 7px;
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.option-title strong {
+  color: #222;
+}
+
+.color-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+
+.color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #aaa;
+}
+
+.color-0 {
+  background: white;
+}
+
+.color-1 {
+  background: #111;
+}
+
+.color-2 {
+  background: #175ce6;
+  border-color: #175ce6;
+}
+
+
+/* ================= SIZE ================= */
+
+.size-heading {
+  display: flex;
+  gap: 7px;
+  font-size: 11px;
+  color: #777;
+  margin-bottom: 9px;
+}
+
+.select-text {
+  color: #222;
+}
+
+.sizes {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.size-button {
+  width: 37px;
+  height: 32px;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  font-size: 11px;
+  transition: 0.25s;
+}
+
+.size-button:hover {
+  border-color: #111;
+}
+
+.size-button.active {
+  background: #171717;
+  color: white;
+  border-color: #171717;
+  transform: translateY(-2px);
+}
+
+
+/* ================= QUANTITY ================= */
+
+.quantity-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 420px;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.quantity-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.quantity-box button {
+  width: 30px;
+  height: 28px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.quantity-box span {
+  min-width: 30px;
+  text-align: center;
+  font-size: 11px;
+}
+
+
+/* ================= ADD BUTTON ================= */
+
+.add-button {
+  width: 100%;
+  max-width: 420px;
+  height: 48px;
+  border: none;
+  border-radius: 30px;
+  background: #171717;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-button:hover {
+  background: #444;
+  transform: translateY(-2px);
+}
+
+.success-message {
+  margin-top: 10px;
+  max-width: 420px;
+  padding: 11px;
+  background: #e8f8ec;
+  color: #1d7534;
+  border-radius: 7px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.total {
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 13px;
+  color: #555;
+}
+
+
+/* ================= PRODUCT VISUAL ================= */
+
+.product-visual {
+  min-height: 570px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.main-shoe {
+  width: 75%;
+  max-width: 650px;
+  max-height: 430px;
+  object-fit: contain;
+  animation: shoeEnter 0.6s ease;
+  filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.12));
+}
+
+@keyframes shoeEnter {
+  0% {
+    opacity: 0;
+    transform: translateX(50px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.image-number {
+  position: absolute;
+  top: 35px;
+  right: 45px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+
+/* ================= IMAGE CONTROLS ================= */
+
+.image-controls {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  gap: 7px;
+}
+
+.image-control {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-control img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.active-control {
+  border: 2px solid #111;
+}
+
+
+/* ================= BOTTOM PRODUCTS ================= */
+
+.available-section {
+  border-top: 1px solid #e5e5e5;
+  padding: 15px 7%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.available-title {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #888;
+  white-space: nowrap;
+}
+
+.product-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.mini-product {
+  min-width: 145px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: 0.25s;
+}
+
+.mini-product:hover {
+  background: #f7f7f7;
+}
+
+.mini-product.selected {
+  border-color: #222;
+  background: #fafafa;
+}
+
+.mini-image {
+  width: 55px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mini-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mini-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.mini-info span {
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.mini-info small {
+  font-size: 8px;
+  color: #888;
+  margin-top: 4px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.bottom-bar {
+  height: 45px;
+  background: #aebeff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7%;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+  .shoe-container {
+    grid-template-columns: 1fr;
+  }
+
+  .product-info {
+    order: 2;
+    padding: 40px 25px;
+  }
+
+  .product-visual {
+    order: 1;
+    min-height: 400px;
+  }
+
+  .main-shoe {
+    width: 85%;
+  }
+
+  .available-section {
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .product-info h1 {
+    font-size: 34px;
+  }
+
+  .product-visual {
+    min-height: 330px;
+  }
+
+  .image-controls {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .image-number {
+    right: 20px;
+    top: 20px;
+  }
+
+  .bottom-bar {
+    padding: 0 20px;
+  }
+
+}
