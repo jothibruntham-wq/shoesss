@@ -105,9 +105,7 @@ function Home() {
 
         <section className="product-info">
 
-          <div className="small-label">
-            PREMIUM FOOTWEAR
-          </div>
+         
 
           <h1>{product.name}</h1>
 
@@ -292,13 +290,7 @@ function Home() {
 
  {/* BOTTOM BAR */}
 
-      <div className="bottom-bar">
-        <span>MOVE DIFFERENT</span>
-
-        <span>
-          {selectedProduct + 1} / {products.length}
-        </span>
-      </div>
+      
 
     </div>
      

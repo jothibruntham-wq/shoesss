@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing:border-box;
 }
 
 body {
@@ -17,24 +18,20 @@ button {
 
 .shoe-page {
   min-height: 100vh;
-  background: #ffffff;
+  background: #1a3f1f;
+  width:100%;
 }
 
 
-/* ================= TOP ================= */
 
-.top-line {
-  height: 12px;
-  width: 100%;
-  background: #e7c8ff;
-}
 
 
 /* ================= MAIN ================= */
 
 .shoe-container {
-  min-height: 570px;
-  display: grid;
+  min-height: 100vh;
+  width:100%;
+  display:flex;
   grid-template-columns: 40% 60%;
 }
 
@@ -51,7 +48,7 @@ button {
 .small-label {
   font-size: 11px;
   letter-spacing: 2px;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 14px;
   color: #777;
 }
